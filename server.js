@@ -75,6 +75,21 @@ app.delete('/urlite/:id', async (req, res) => {
 })
 
 
+app.put('/urlite/:id', async (req, res) => {
+  try {
+    const { name } = req.body;
+    const updatedUrl = await URLite.findByIdAndUpdate(req.params.id, { name }, { new: true });
+
+    if (!updatedUrl) return res.sendStatus(404);
+
+    res.json(updatedUrl);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server Error');
+  }
+});
+
+
 
 app.listen(port, (err) => {
   if (err) {

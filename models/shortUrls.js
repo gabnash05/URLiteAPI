@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 import generateShortUrl from "../util/generateShortUrl.js";
 
 const URLiteSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    default: ''
+  }, 
   full: {
     type: String,
     required: true,
