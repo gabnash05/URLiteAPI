@@ -21,7 +21,12 @@ mongoose.connect(uri)
 //Middlewear
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: ['http://localhost:5173', 'https://your-production-domain.com'], // Update with your actual origins
+  optionsSuccessStatus: 200
+};
+app.use(cors(corsOptions));
 
 
 //Routes
