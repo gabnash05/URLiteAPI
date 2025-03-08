@@ -22,7 +22,7 @@ URLiteAPI is the backend service for the URLite application, a URL shortening se
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/URLiteAPI.git
+   git clone https://github.com/gabnash05/URLiteAPI.git
    cd URLiteAPI
 
 2. Install dependencies:
